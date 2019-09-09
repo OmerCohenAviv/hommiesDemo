@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import Title from '../../components/LosAngeles/Title/Title'
-import CountriesList from '../../components/LosAngeles/CountriesList/CountriesList';
-import israelPicture from '../../components/LosAngeles/Assets/Countries/Pictures/tel-aviv-cityscape-468bb6766ca3.jpg';
-import francePicture from '../../components/LosAngeles/Assets/Countries/Pictures/photo-1431274172761-fca41d930114.jpg';
-import germanyPicture from '../../components/LosAngeles/Assets/Countries/Pictures/4ca098f1ea04ab595d7fe337d1af947f44556b2fadf9a0111c843ba2055d324d.jpg';
+import Title from '../../../components/LosAngeles/Title/Title'
+import CountriesList from '../../../components/LosAngeles/CountriesList/CountriesList';
+import israelPicture from '../../../components/LosAngeles/Assets/Countries/Pictures/tel-aviv-cityscape-468bb6766ca3.jpg';
+import francePicture from '../../../components/LosAngeles/Assets/Countries/Pictures/photo-1431274172761-fca41d930114.jpg';
+import germanyPicture from '../../../components/LosAngeles/Assets/Countries/Pictures/4ca098f1ea04ab595d7fe337d1af947f44556b2fadf9a0111c843ba2055d324d.jpg';
 
 class LosAngeles extends Component {
     state = {
@@ -55,6 +55,7 @@ class LosAngeles extends Component {
             <div>
                 <Title />
                 <CountriesList
+                    {...this.props}
                     toShowJobs={this.state.showJobs}
                     showJobs={this.showJobsHandler}
                     goBack={this.goBackHandler}

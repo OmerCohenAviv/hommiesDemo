@@ -4,7 +4,7 @@ import Jobs from '../Jobs/Jobs';
 import { Button, Card, ListGroup } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserFriends } from '@fortawesome/free-solid-svg-icons'
-import { faMoneyBill } from '@fortawesome/free-solid-svg-icons'
+import { faPeopleCarry } from '@fortawesome/free-solid-svg-icons'
 
 const countryCommunity = (props) => {
     const styles = {
@@ -35,7 +35,7 @@ const countryCommunity = (props) => {
                         <Button
                             onClick={props.showJobs}
                             style={{ textAlign: 'center', whiteSpace: 'nowrap' }}>
-                            Click here to check them out! <FontAwesomeIcon icon={faMoneyBill} />
+                            Click here to check them out! <FontAwesomeIcon icon={faPeopleCarry} />
                         </Button>
                     </ListGroup.Item>
                 </ListGroup>

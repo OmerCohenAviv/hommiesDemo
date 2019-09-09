@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import Israel from '../Communities/Countries/Israel/Israel';
-import France from '../Communities/Countries/France/France';
-import Germany from '../Communities/Countries/Germany/Germany';
+import Israel from './Countries/Israel/Israel';
+import France from './Countries/France/France';
+import Germany from './Countries/Germany/Germany';
 
 const communities = (props) => {
     let displayCommunity = 'Srry we didnt found what u are lookin for'

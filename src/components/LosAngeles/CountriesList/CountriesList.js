@@ -1,11 +1,11 @@
 import React from 'react';
 import { Row, Container, Col } from 'react-bootstrap';
 import CountryDisplay from './CountryDisplay/CountryDisplay';
-import Communities from '../../Communities/Communities';
+import Communities from '../Communities/Communities';
+
 
 const countriesList = (props) => {
     let { connectedCountries, clickedCountry } = props
-    console.log(clickedCountry.clicked)
     connectedCountries = Object.values(connectedCountries)
     const countries = []
     for (let country of connectedCountries) {
@@ -25,20 +25,22 @@ const countriesList = (props) => {
             </Row>
         </Container>
     );
-    if (clickedCountry.clicked) {
-        display = <Communities 
-        toShowJobs={props.toShowJobs}
-        showJobs={props.showJobs}
-        countryName={clickedCountry.countryName} g
-        goBack={props.goBack}
-        />
-    }
 
-    return (
-        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '20px' }}>
-            {display}
-        </div>
-    );
+    if (clickedCountry.clicked) {
+        display = (
+            <Communities
+                toShowJobs={props.toShowJobs}
+                showJobs={props.showJobs}
+                countryName={clickedCountry.countryName}
+                goBack={props.goBack}
+            />
+        );
+    }
+return (
+    <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '20px' }}>
+        {display}
+    </div>
+);
 };
 
 

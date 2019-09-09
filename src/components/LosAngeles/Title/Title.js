@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 
-const title = ( props ) => (
-    <h4 style={{marginBottom: '30px'}}>Los Angeles</h4>
+const title = (props) => (
+    <Fragment>
+        <h3 style={{ marginBottom: '30px' }}>Los Angeles - Communities!</h3>
+        
+    </Fragment>
 );
 
 
