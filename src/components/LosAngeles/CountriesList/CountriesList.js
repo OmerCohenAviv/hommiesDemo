@@ -19,7 +19,7 @@ const countriesList = (props) => {
         )
     }
     let display = (
-        <Container >
+        <Container  >
             <Row >
                 {countries}
             </Row>
@@ -37,7 +37,7 @@ const countriesList = (props) => {
         );
     }
 return (
-    <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '20px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '20px'}}>
         {display}
     </div>
 );

@@ -4,7 +4,7 @@ import { Card, Button } from 'react-bootstrap';
 const countriesList = (props) => {
     let display = (
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={props.countryImage} />
+            <Card.Img variant="top" src={props.countryImage}  style={{ height:'15vw', objectFit:'cover'}}/>
             <Card.Body>
                 <Card.Title> {props.countryName} </Card.Title>
                 <Card.Text>

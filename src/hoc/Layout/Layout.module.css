@@ -1,3 +1,7 @@
 .Layout {
-   margin-top: 42px;
-};
+  background-image: url('../../components/LosAngeles/Assets/Countries/Pictures/bondphoto.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

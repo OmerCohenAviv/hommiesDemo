@@ -6,6 +6,7 @@ import israelPicture from '../../../components/LosAngeles/Assets/Countries/Pictu
 import francePicture from '../../../components/LosAngeles/Assets/Countries/Pictures/photo-1431274172761-fca41d930114.jpg';
 import germanyPicture from '../../../components/LosAngeles/Assets/Countries/Pictures/4ca098f1ea04ab595d7fe337d1af947f44556b2fadf9a0111c843ba2055d324d.jpg';
 
+
 class LosAngeles extends Component {
     state = {
         connectedCountries: {
@@ -52,7 +53,7 @@ class LosAngeles extends Component {
         const { connectedCountries, clickedCountry } = this.state
 
         return (
-            <div>
+            <div >
                 <Title />
                 <CountriesList
                     {...this.props}

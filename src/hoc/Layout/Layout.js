@@ -6,7 +6,7 @@ import classes from './Layout.module.css'
 class Layout extends Component {
     render() {
         return (
-            <div>
+            <div style={{height:'100%'}}>
                 <Toolbar  {...this.props} />
                 <main className={classes.Layout}>
                     {this.props.children}
