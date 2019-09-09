@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 import Title from '../../components/LosAngeles/Title/Title'
 import CountriesList from '../../components/LosAngeles/CountriesList/CountriesList';
@@ -26,35 +26,41 @@ class LosAngeles extends Component {
         clickedCountry: {
             clicked: false,
             countryName: ''
-        }
+        },
+        showJobs: false,
     };
 
     clickedCountryHandler = (countryName) => {
-        const clickedCountryUpdated = {...this.state.clickedCountry,
+        const clickedCountryUpdated = {
+            ...this.state.clickedCountry,
             clicked: true,
             countryName: countryName
         };
-        this.setState({clickedCountry: clickedCountryUpdated})
+        this.setState({ clickedCountry: clickedCountryUpdated })
     };
-    
+
     goBackHandler = () => {
-        const clickedCountryUpdated = {...this.state.clickedCountry, clicked: false}
-        this.setState({clickedCountry: clickedCountryUpdated})
+        const clickedCountryUpdated = { ...this.state.clickedCountry, clicked: false }
+        this.setState({ clickedCountry: clickedCountryUpdated, showJobs: false })
     };
+
+    showJobsHandler = () => {
+        this.setState({showJobs: true,})
+    }
 
     render() {
         const { connectedCountries, clickedCountry } = this.state
-        
+
         return (
             <div>
-                <Fragment >
-                    <Title />
-                    <CountriesList
-                        goBack = {this.goBackHandler}
-                        clickedCountry = {clickedCountry}
-                        click={this.clickedCountryHandler}
-                        connectedCountries={connectedCountries} />
-                </Fragment>
+                <Title />
+                <CountriesList
+                    toShowJobs={this.state.showJobs}
+                    showJobs={this.showJobsHandler}
+                    goBack={this.goBackHandler}
+                    clickedCountry={clickedCountry}
+                    click={this.clickedCountryHandler}
+                    connectedCountries={connectedCountries} />
             </div>
         );
     };

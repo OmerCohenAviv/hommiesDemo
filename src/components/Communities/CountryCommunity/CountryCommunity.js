@@ -1,15 +1,48 @@
 import React from 'react';
-import { Button } from 'react-bootstrap'
 
-const countryCommunity = ( props ) => {
+import Jobs from '../Jobs/Jobs';
+import { Button, Card, ListGroup } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserFriends } from '@fortawesome/free-solid-svg-icons'
+import { faMoneyBill } from '@fortawesome/free-solid-svg-icons'
+
+const countryCommunity = (props) => {
+    const styles = {
+        textAlign: 'left',
+        display: 'flex'
+    };
+    let jobs = null
+    if (props.toShowJobs) {
+        jobs = <Jobs />
+    };
+
     return (
-        <div>
-            <p>Total People - {props.totalPeople} </p> 
-            <p>Planning To Arive - {props.planningToArive}</p>
-            <p>Same Hobbies With  - {props.sameHobbiesPeople} People <Button>Contact Them!</Button></p>
-            <p>You Have {props.jobsForUser} Jobs Next to you <Button> Click here to check them out!</Button></p>
-            
+        <div style={{ ...styles }} >
+            <Card style={{ width: '18rem' }}>
+                <ListGroup variant="flush">
+                    <ListGroup.Item>
+                        Total People - {props.totalPeople}
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                        Planning To Arive - {props.planningToArive}
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                        Same Hobbies With  - {props.sameHobbiesPeople} People
+                        <Button >Contact Them! <FontAwesomeIcon icon={faUserFriends} /></Button>
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                        You Have {props.jobsForUser} Jobs Next to you
+                        <Button
+                            onClick={props.showJobs}
+                            style={{ textAlign: 'center', whiteSpace: 'nowrap' }}>
+                            Click here to check them out! <FontAwesomeIcon icon={faMoneyBill} />
+                        </Button>
+                    </ListGroup.Item>
+                </ListGroup>
+            </Card>
+            {jobs}
         </div>
+
     );
 };
 

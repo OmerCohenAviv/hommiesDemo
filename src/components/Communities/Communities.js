@@ -1,24 +1,34 @@
-import React from 'react';
-import Israel from './Israel/Israel'
-import France from './France/France'
-import Germany from './Germany/Germany'
+import React, { Fragment } from 'react';
+import Israel from '../Communities/Countries/Israel/Israel';
+import France from '../Communities/Countries/France/France';
+import Germany from '../Communities/Countries/Germany/Germany';
 
 const communities = (props) => {
-    console.log(props)
     let displayCommunity = 'Srry we didnt found what u are lookin for'
     if (props.countryName === 'Israel') {
-        displayCommunity = <Israel goBack={props.goBack}/>
+        displayCommunity = <Israel
+            showJobs={props.showJobs}
+            toShowJobs={props.toShowJobs}
+            goBack={props.goBack} />
     }
     if (props.countryName === 'Germany') {
-        displayCommunity = <Germany goBack={props.goBack} />
+        displayCommunity = <Germany
+            showJobs={props.showJobs}
+            toShowJobs={props.toShowJobs}
+            goBack={props.goBack} />
     }
     if (props.countryName === 'France') {
-        displayCommunity = <France  goBack={props.goBack}/>
+        displayCommunity = <France
+            showJobs={props.showJobs}
+            toShowJobs={props.toShowJobs}
+            goBack={props.goBack} />
     }
     return (
-        <div>
+        <Fragment>
+            <h4>{props.countryName} Community </h4>
             {displayCommunity}
-        </div>
+        </Fragment>
+
     );
 };
 

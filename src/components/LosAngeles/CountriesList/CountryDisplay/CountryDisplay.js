@@ -10,7 +10,7 @@ const countriesList = (props) => {
                 <Card.Text>
                     {props.countryDescription}
                 </Card.Text>
-                <Button onClick={() => props.click(props.countryName)} variant="primary"> Get New Freinds - {props.countryName} Community</Button>
+                <Button onClick={() => props.click(props.countryName)} variant="primary"> Get New Friends - {props.countryName} Community</Button>
             </Card.Body>
         </Card>
     )

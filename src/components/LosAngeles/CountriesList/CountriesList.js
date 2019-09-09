@@ -26,11 +26,16 @@ const countriesList = (props) => {
         </Container>
     );
     if (clickedCountry.clicked) {
-        display = <Communities countryName={clickedCountry.countryName} goBack={props.goBack} />
+        display = <Communities 
+        toShowJobs={props.toShowJobs}
+        showJobs={props.showJobs}
+        countryName={clickedCountry.countryName} g
+        goBack={props.goBack}
+        />
     }
 
     return (
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '20px' }}>
             {display}
         </div>
     );
