@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const toolbar = (props) => {
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" style={{width:'100%'}}>
             <Nav activeKey="1" >
                 <Nav.Item>
                     <NavLink to='/' className="nav-link" activeClassName='nav-link active' exact>
@@ -23,11 +23,7 @@ const toolbar = (props) => {
                         Germany
                     </NavLink>
                 </NavDropdown>
-                <Nav.Item className='justify-content-end'>
-                    <NavLink to='/' className="nav-link" activeClassName='nav-link active' exact>
-                        Los Angeles City
-                     </NavLink>
-                </Nav.Item>
+
             </Nav>
         </Navbar>
     );
